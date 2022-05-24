@@ -1,0 +1,6 @@
+================ Testing Acc (Tue May 24 00:07:53 2022) ================
+epoch: 1, TEST REC LOSS: [0.25705]
+
+================ Testing Acc (Tue May 24 00:08:44 2022) ================
+epoch: 2, TEST REC LOSS: [0.22206]
+

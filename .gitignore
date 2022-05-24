@@ -1,0 +1,14 @@
+# cache
+__pycache__
+
+# pip installable package
+graspnet_6dof.egg-info/
+
+# vscode
+.vscode
+
+# trained model parameters
+checkpoints/*
+
+# ps_grasp codebase
+3d_grasp

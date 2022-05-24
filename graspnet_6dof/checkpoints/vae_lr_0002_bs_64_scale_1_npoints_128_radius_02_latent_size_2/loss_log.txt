@@ -1,0 +1,4 @@
+================ Training Loss (Tue May 24 00:06:56 2022) ================
+(epoch: 1, iters: 1600, time: 0.007, data: 1.160) total_loss: 0.600 kl_loss: 0.026 reconstruction_loss: 0.432 confidence loss: 0.143
+(epoch: 2, iters: 1216, time: 0.006, data: 0.000) total_loss: 0.482 kl_loss: 0.036 reconstruction_loss: 0.384 confidence loss: 0.061
+(epoch: 3, iters: 832, time: 0.004, data: 0.747) total_loss: 0.355 kl_loss: 0.036 reconstruction_loss: 0.284 confidence loss: 0.035
