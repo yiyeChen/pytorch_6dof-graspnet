@@ -55,6 +55,16 @@ class GraspSamplingData(BaseDataset):
         gt_control_points = utils.transform_control_points_numpy(
             np.array(output_grasps), self.opt.num_grasps_per_object, mode='rt')
 
+        #### Check the point cloud. The point cloud is only the object's point cloud. 
+        # from mayavi import mlab
+        # mlab.figure(bgcolor=(1, 1, 1))
+        # mlab.points3d(pc[:, 0],
+        #               pc[:, 1],
+        #               pc[:, 2],
+        #               pc[:, 2],
+        #               colormap='plasma')
+        # mlab.show()
+
         meta['pc'] = np.array([pc] * self.opt.num_grasps_per_object)[:, :, :3]
         meta['grasp_rt'] = np.array(output_grasps).reshape(
             len(output_grasps), -1)

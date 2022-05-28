@@ -8,6 +8,7 @@ graspnet_6dof.egg-info/
 .vscode
 
 # trained model parameters
+graspnet_6dof/checkpoints_orig/
 checkpoints/*
 
 # ps_grasp codebase

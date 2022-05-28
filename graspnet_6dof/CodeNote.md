@@ -35,15 +35,14 @@ The main training class is the ``` grasp_net.GraspNetModel```.
 The required inputs, as in the ```GraspNetModel.set_inputs``` method, are:
 
 - ```pc```: The point cloud. **Note: It duplicate the object point cloud to have the shape (*N_gpo*, N_obj_pc, 3)**
-  
   - [x] In which frame? High chance is camera. Confirmed!
+  - [ ] Content. Only the object or object + table? - Object only
   - [x] Preprocess from the dataloader side? Some in the ```change_object_and_render``` functtion
     - ```apply_dropout``` - Seem to drop some points, but not applied given the parameter setting
     - Get fixed point number (1024)
     - Centeralize 
   
 - ```grasp_rt```: The ground truth grasps (positive).
-  
   - [x] What is the format?  (*N_gpo*, 16), where 16 is the vectorized homogeneous transformation matrix
     -  It's set to have a fixed number of grasps/object *N_gpo = 64*. If the number of the grasp cluster is smaller than that number, then sample with put back.
   - [x] Relate to what frame? Camera
@@ -51,9 +50,8 @@ The required inputs, as in the ```GraspNetModel.set_inputs``` method, are:
   - [x] Need preprocess?  Seems not. Just get the camera frame is okay.
   
 - ```target_cps```: This is the control points used to calculate the reconstruction error.
-
   - [x] ```utils.transform_control_points_numpy``` can get the points given the grasp poses.
-
+  
 - There are others that seem not used in the training process:
 
   - [ ] ```pc_pose```: The object pose in the camera frame. (inverse of the camera pose)
